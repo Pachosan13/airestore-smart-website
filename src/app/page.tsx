@@ -15,16 +15,17 @@ export default function HomePage() {
   return (
     <div className="space-y-16 pb-16">
       <Hero
-        title="Materiales y repuestos de aire acondicionado en Panamá, listos cuando los necesitas"
-        subtitle="Aire Store Panamá es la ferretería HVAC con inventario real para técnicos, empresas y proyectos. Cotiza repuestos, tubería de cobre, compresores y accesorios con entrega express."
+        title="Materiales y repuestos HVAC en Panamá, listos cuando los necesitas."
+        subtitle="Aire Store: todo para técnicos y proyectos en climatización."
+        badgeText="+15 años de experiencia"
         bullets={[
-          "Repuestos minisplit Panamá con soporte técnico",
-          "Materiales de refrigeración y ferretería HVAC Panamá",
-          "Compresores y capacitores listos para despacho",
-          "Pedidos por WhatsApp o correo con respuesta rápida",
+          "Repuestos minisplit y compresores listos para despacho en Panamá",
+          "Tubería de cobre, materiales eléctricos y ferretería HVAC",
+          "Cotizaciones por WhatsApp con inventario validado",
+          "Logística para técnicos, edificios y obras de climatización",
         ]}
-        primaryCta={{ label: "Cotizar ahora", href: "/contacto" }}
-        secondaryCta={{ label: "Catálogo de productos", href: "/productos" }}
+        primaryCta={{ label: "Ver catálogo", href: "/productos" }}
+        secondaryCta={{ label: "Cotizar por WhatsApp", href: "https://wa.me/50761231234" }}
       />
       <StatsStrip />
 
