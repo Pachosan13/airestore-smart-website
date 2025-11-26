@@ -1,0 +1,82 @@
+[
+  {
+    "id": "p1",
+    "nombre": "Mini Split Inverter 18K BTU",
+    "categoria": "aires-residenciales",
+    "resumen": "Alta eficiencia SEER 18 con refrigerante ecológico y control Wi-Fi.",
+    "caracteristicas": ["SEER 18", "Filtro HEPA opcional", "Silencioso"],
+    "imagen": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "p2",
+    "nombre": "Sistema Cassette 24K BTU",
+    "categoria": "aires-comerciales",
+    "resumen": "Cassette 4 vías ideal para oficinas y comercios con distribución uniforme.",
+    "caracteristicas": ["Bomba de condensado", "Panel decorativo", "Control remoto"],
+    "imagen": "https://images.unsplash.com/photo-1503389152951-9f343605f61e?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "p3",
+    "nombre": "VRF Heat Recovery",
+    "categoria": "sistemas-vrf",
+    "resumen": "Recuperación de calor para operar enfriando y calentando zonas en paralelo.",
+    "caracteristicas": ["COP superior", "BMS ready", "Arranque suave"],
+    "imagen": "https://images.unsplash.com/photo-1582719478248-54e9f2af2d70?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "p4",
+    "nombre": "Ventilador inline EC",
+    "categoria": "ventilacion",
+    "resumen": "Motores EC de bajo consumo para ventilación continua en proyectos LEED.",
+    "caracteristicas": ["Control de velocidad", "Ultra silencioso", "Sensores CO₂"],
+    "imagen": "https://images.unsplash.com/photo-1582719478244-0119023483c1?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "p5",
+    "nombre": "Rack de refrigeración 10HP",
+    "categoria": "refrigeracion-comercial",
+    "resumen": "Sistema modular para cuartos fríos con monitoreo remoto.",
+    "caracteristicas": ["Control electrónico", "Compatibilidad IoT", "Line set pre-armado"],
+    "imagen": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "p6",
+    "nombre": "Purificador UV-C",
+    "categoria": "calidad-aire",
+    "resumen": "Lámpara UV-C y filtro MERV 13 para mejorar IAQ en ductos.",
+    "caracteristicas": ["Sensor de partículas", "Instalación rápida", "Garantía 2 años"],
+    "imagen": "https://images.unsplash.com/photo-1523419400524-fae9ff1a7cfa?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "p7",
+    "nombre": "Plan de mantenimiento Elite",
+    "categoria": "mantenimiento",
+    "resumen": "Checklists digitales, químicos premium y reportes trimestrales.",
+    "caracteristicas": ["Visitas programadas", "Lubricación y vacío", "Reporte fotográfico"],
+    "imagen": "https://images.unsplash.com/photo-1555580399-7b351dbba29d?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "p8",
+    "nombre": "Termostato inteligente Wi-Fi",
+    "categoria": "controles",
+    "resumen": "Control remoto, geofencing y dashboards de consumo.",
+    "caracteristicas": ["Compatibilidad voice", "Alertas", "Integración BMS"],
+    "imagen": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "p9",
+    "nombre": "Chiller scroll 40TR",
+    "categoria": "industrial",
+    "resumen": "Chiller aire-agua con recuperación de calor y controles digitales.",
+    "caracteristicas": ["Tablero NEMA", "Arranque suave", "BMS BACnet"],
+    "imagen": "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "p10",
+    "nombre": "Retrofit ahorro energético",
+    "categoria": "energia-eficiente",
+    "resumen": "Reemplazo de compresores, variadores y válvulas de expansión electrónicas.",
+    "caracteristicas": ["Ahorro 25%", "Monitoreo web", "ROI <18 meses"],
+    "imagen": "https://images.unsplash.com/photo-1523867572715-adf5c0f1b4f7?auto=format&fit=crop&w=600&q=80"
+  }
+]

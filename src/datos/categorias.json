@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "aires-residenciales",
+    "nombre": "Aires residenciales",
+    "descripcion": "Split inverter, multisplit y ductos silenciosos para apartamentos y casas."
+  },
+  {
+    "slug": "aires-comerciales",
+    "nombre": "Aires comerciales",
+    "descripcion": "Sistemas rooftop y paquetes para locales, retail y oficinas."
+  },
+  {
+    "slug": "sistemas-vrf",
+    "nombre": "Sistemas VRF",
+    "descripcion": "Ingeniería, instalación y puesta en marcha de VRF de alta eficiencia."
+  },
+  {
+    "slug": "ventilacion",
+    "nombre": "Ventilación y extracción",
+    "descripcion": "Ductería, inyección y extracción balanceada para confort y normas."
+  },
+  {
+    "slug": "refrigeracion-comercial",
+    "nombre": "Refrigeración comercial",
+    "descripcion": "Cuartos fríos, vitrinas y racks con monitoreo."
+  },
+  {
+    "slug": "calidad-aire",
+    "nombre": "Calidad de aire",
+    "descripcion": "Filtración, purificación UV y sensores inteligentes."
+  },
+  {
+    "slug": "mantenimiento",
+    "nombre": "Mantenimiento premium",
+    "descripcion": "Planes preventivos y correctivos con reportes digitales."
+  },
+  {
+    "slug": "controles",
+    "nombre": "Controles y domótica",
+    "descripcion": "Termostatos inteligentes, BMS y automatización HVAC."
+  },
+  {
+    "slug": "industrial",
+    "nombre": "Industrial",
+    "descripcion": "Chillers, bombas de calor y soluciones especiales."
+  },
+  {
+    "slug": "energia-eficiente",
+    "nombre": "Eficiencia energética",
+    "descripcion": "Auditorías, retrofits y optimización de consumo."
+  }
+]

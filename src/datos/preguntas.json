@@ -1,0 +1,14 @@
+[
+  {
+    "pregunta": "¿Cuánto tarda una instalación residencial?",
+    "respuesta": "Para minisplit estándar tomamos entre 4 y 6 horas incluyendo vacío, pruebas y limpieza final."
+  },
+  {
+    "pregunta": "¿Atienden emergencias en fines de semana?",
+    "respuesta": "Sí, contamos con cuadrillas de guardia 24/7 en Ciudad de Panamá y Panamá Oeste."
+  },
+  {
+    "pregunta": "¿Puedo integrar mis aires al BMS?",
+    "respuesta": "Ofrecemos termostatos inteligentes y gateways BACnet/Modbus para integraciones corporativas."
+  }
+]
