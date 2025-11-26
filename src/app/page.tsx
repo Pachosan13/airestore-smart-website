@@ -1,65 +1,83 @@
-import Image from "next/image";
+import { Hero } from "@/components/Hero";
+import { CategoryGrid } from "@/components/CategoryGrid";
+import { ProductList } from "@/components/ProductList";
+import { StatsStrip } from "@/components/StatsStrip";
+import { CTASection } from "@/components/CTASection";
+import Link from "next/link";
 
-export default function Home() {
+export const metadata = {
+  title: "Materiales y repuestos de aire acondicionado en Panamá | Aire Store",
+  description:
+    "Repuestos de aire acondicionado en Panamá, tubería de cobre, compresores, capacitores y ferretería HVAC para técnicos, empresas y proyectos.",
+};
+
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <div className="space-y-16 pb-16">
+      <Hero
+        title="Materiales y repuestos HVAC en Panamá, listos cuando los necesitas."
+        subtitle="Aire Store: todo para técnicos y proyectos en climatización."
+        badgeText="+15 años de experiencia"
+        bullets={[
+          "Repuestos minisplit y compresores listos para despacho en Panamá",
+          "Tubería de cobre, materiales eléctricos y ferretería HVAC",
+          "Cotizaciones por WhatsApp con inventario validado",
+          "Logística para técnicos, edificios y obras de climatización",
+        ]}
+        primaryCta={{ label: "Ver catálogo", href: "/productos" }}
+        secondaryCta={{ label: "Cotizar por WhatsApp", href: "https://wa.me/50761231234" }}
+      />
+      <StatsStrip />
+
+      <section className="mx-auto max-w-6xl px-4">
+        <div className="mb-6 flex items-center justify-between">
+          <div>
+            <p className="text-sm font-semibold uppercase text-primary">Categorías principales</p>
+            <h2 className="text-2xl font-semibold text-slate-900">Materiales HVAC Panamá</h2>
+          </div>
+          <Link className="text-sm font-semibold text-primary" href="/productos">
+            Ver todas
+          </Link>
+        </div>
+        <CategoryGrid />
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4">
+        <div className="mb-6 flex items-center justify-between">
+          <div>
+            <p className="text-sm font-semibold uppercase text-primary">Repuestos destacados</p>
+            <h2 className="text-2xl font-semibold text-slate-900">Soluciones listas para técnicos</h2>
+          </div>
+          <Link className="text-sm font-semibold text-primary" href="/para-tecnicos">
+            Ver beneficios
+          </Link>
+        </div>
+        <ProductList />
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4">
+        <div className="grid gap-6 md:grid-cols-3">
+          {["Diagnóstico y asesoría técnica", "Garantías gestionadas en Panamá", "Supervisión de obras"].map((item) => (
+            <div
+              key={item}
+              className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+            >
+              <h3 className="text-lg font-semibold text-slate-900">{item}</h3>
+              <p className="mt-2 text-sm text-slate-700">
+                Acompañamos tus proyectos desde la selección de repuestos hasta la puesta en marcha. Ideal para técnicos, empresas y
+                contratistas que necesitan respuestas rápidas.
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4">
+        <CTASection
+          title="Cotiza repuestos de aire acondicionado y materiales HVAC en Panamá"
+          subtitle="Envíanos tu lista de partes: capacitores, compresores, tubería de cobre, materiales eléctricos y ferretería HVAC. Respondemos con disponibilidad y tiempos de entrega."
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </section>
     </div>
   );
 }

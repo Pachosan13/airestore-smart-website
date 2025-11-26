@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" role="img" aria-labelledby="title desc">
+  <title id="title">Aire Store Panamá</title>
+  <desc id="desc">Logotipo simplificado para Aire Store Panamá con copo de nieve y pingüino minimalista.</desc>
+  <defs>
+    <linearGradient id="g" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop stop-color="#0ea5e9" offset="0%" />
+      <stop stop-color="#0f172a" offset="100%" />
+    </linearGradient>
+  </defs>
+  <circle cx="42" cy="40" r="32" fill="url(#g)" opacity="0.12" />
+  <path
+    d="M42 18c7 0 12 6 12 14 0 9-7 17-12 26-5-9-12-17-12-26 0-8 5-14 12-14Z"
+    fill="#0ea5e9"
+  />
+  <circle cx="42" cy="32" r="6" fill="#0f172a" />
+  <circle cx="40" cy="31" r="1.6" fill="#fff" />
+  <circle cx="44" cy="31" r="1.6" fill="#fff" />
+  <path d="M40 35c1.2 1 2.8 1 4 0" stroke="#fff" stroke-width="1.6" stroke-linecap="round" />
+  <path d="M34 44c3 3 7 5 8 5s5-2 8-5" stroke="#0f172a" stroke-width="2.4" stroke-linecap="round" fill="none" />
+  <path
+    d="M88 52c-2.4 0-4-1.3-4-3.6V22h5.4v12.6h10.2V22h5.4v26.4H99.6V39.6H89.4v8.8c0 1 .5 1.6 1.5 1.6H100V52H88Z"
+    fill="#0f172a"
+  />
+  <path
+    d="M119.5 22c5.7 0 9.5 3.4 9.5 9.1v12.2c0 5.7-3.8 9.1-9.5 9.1h-9.9V22h9.9Zm-4.5 5.2v16.7h4.5c2.6 0 4.1-1.4 4.1-3.9V31.1c0-2.5-1.5-3.9-4.1-3.9h-4.5Z"
+    fill="#0f172a"
+  />
+  <path
+    d="M135 22h5.6l6.8 17.6 6.8-17.6h5.6l-9.8 26.4h-4.8L135 22Z"
+    fill="#0f172a"
+  />
+  <path
+    d="M173.5 22c5.7 0 9.5 3.4 9.5 9.1v12.2c0 5.7-3.8 9.1-9.5 9.1h-9.9V22h9.9Zm-4.5 5.2v16.7h4.5c2.6 0 4.1-1.4 4.1-3.9V31.1c0-2.5-1.5-3.9-4.1-3.9h-4.5Z"
+    fill="#0f172a"
+  />
+  <path
+    d="M189.3 22h14.9c4.5 0 7.3 2.8 7.3 7.2 0 3.2-1.5 5.5-4.2 6.5 3.2 1 4.8 3.7 4.8 6.9 0 4.8-3.2 7.8-8 7.8h-14.8V22Zm5.3 5.2v7.2h8.3c1.8 0 2.9-1.2 2.9-3.2 0-2-1-4-2.9-4h-8.3Zm0 11.4v7.8h9.1c1.8 0 3-1.4 3-3.8 0-2.4-1.2-4-3-4h-9.1Z"
+    fill="#0f172a"
+  />
+  <path
+    d="M222.8 52c-5.9 0-9.8-3.5-9.8-9.4v-11c0-5.9 3.9-9.4 9.8-9.4 5.8 0 9.7 3.5 9.7 9.4V32h-5.3v-1.4c0-2.8-1.3-4.6-4.4-4.6-3.1 0-4.4 1.8-4.4 4.6v10.7c0 2.8 1.3 4.6 4.4 4.6 3.1 0 4.4-1.8 4.4-4.6V39h5.3v3.6c0 6-3.9 9.4-9.7 9.4Z"
+    fill="#0f172a"
+  />
+  <path
+    d="M249 52c-5.8 0-9.7-3.5-9.7-9.4V31.6c0-5.9 3.9-9.4 9.7-9.4 5.9 0 9.8 3.5 9.8 9.4v10.9c0 5.9-3.9 9.4-9.8 9.4Zm0-5.3c3.1 0 4.4-1.8 4.4-4.6V31.6c0-2.8-1.3-4.6-4.4-4.6-3.1 0-4.4 1.8-4.4 4.6v10.6c0 2.8 1.3 4.6 4.4 4.6Z"
+    fill="#0ea5e9"
+  />
+  <path
+    d="M265.5 22h5.4v21.2c0 2.8 1.3 4.5 4.3 4.5 2.9 0 4.3-1.7 4.3-4.5V22h5.4v21.2c0 6.1-3.8 9.8-9.7 9.8-5.8 0-9.6-3.7-9.6-9.8V22Z"
+    fill="#0f172a"
+  />
+  <text x="86" y="70" font-size="12" fill="#0ea5e9" font-family="Segoe UI, Arial, sans-serif">El Ambiente Ideal</text>
+</svg>
