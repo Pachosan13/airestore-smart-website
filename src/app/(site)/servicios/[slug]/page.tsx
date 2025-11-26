@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 
 import { QuoteForm } from "@/components/QuoteForm";
 import { servicios } from "@/lib/data";
+import { buildBreadcrumbJsonLd, buildServiceJsonLd, getServicioMetadata, siteUrl } from "@/lib/seo";
 
 function getServicio(slug: string) {
   return servicios.find((servicio) => servicio.slug === slug);
@@ -14,20 +15,7 @@ export async function generateStaticParams() {
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const servicio = getServicio(params.slug);
-
-  if (!servicio) {
-    return {
-      title: "Servicio no encontrado",
-      description: "No pudimos encontrar el servicio solicitado.",
-    };
-  }
-
-  return {
-    title: `${servicio.titulo} | Aire Store Panamá`,
-    description: servicio.descripcionLarga,
-    alternates: { canonical: `/servicios/${servicio.slug}` },
-  };
+  return getServicioMetadata(params.slug);
 }
 
 export default function ServicioDetallePage({ params }: { params: { slug: string } }) {
@@ -38,9 +26,22 @@ export default function ServicioDetallePage({ params }: { params: { slug: string
   }
 
   const whatsappHref = `https://wa.me/50760000000?text=Hola%20quiero%20cotizar%20${encodeURIComponent(servicio.titulo)}`;
+  const servicioJsonLd = buildServiceJsonLd(servicio);
+  const breadcrumbsJsonLd = buildBreadcrumbJsonLd([
+    { name: "Inicio", url: siteUrl },
+    { name: "Servicios", url: `${siteUrl}/servicios` },
+    { name: servicio.titulo, url: `${siteUrl}/servicios/${servicio.slug}` },
+  ]);
 
   return (
     <div className="space-y-10">
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([servicioJsonLd, breadcrumbsJsonLd]),
+        }}
+      />
       <section className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
         <p className="text-sm font-semibold uppercase text-blue-700">Servicio HVAC</p>
         <h1 className="mt-2 text-3xl font-semibold text-slate-900">{servicio.titulo}</h1>

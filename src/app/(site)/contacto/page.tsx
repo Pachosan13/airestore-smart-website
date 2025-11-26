@@ -1,16 +1,19 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { QuoteForm } from "@/components/QuoteForm";
+import { buildLocalBusinessJsonLd, getContactoMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contacto HVAC Panamá",
-  description: "Solicita una cotización HVAC en Panamá. Respuesta en minutos por teléfono o WhatsApp.",
-  alternates: { canonical: "/contacto" },
-};
+export const metadata = getContactoMetadata();
 
 export default function ContactoPage() {
+  const localBusinessJsonLd = buildLocalBusinessJsonLd();
+
   return (
     <div className="space-y-10">
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+      />
       <header className="space-y-3">
         <p className="text-sm font-semibold uppercase text-blue-700">Contacto</p>
         <h1 className="text-3xl font-semibold text-slate-900">Hablemos de tu proyecto HVAC en Panamá</h1>

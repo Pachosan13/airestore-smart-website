@@ -1,13 +1,9 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { QuoteForm } from "@/components/QuoteForm";
 import { servicios } from "@/lib/data";
+import { buildServiceJsonLd, getServiciosMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Servicios HVAC en Panamá",
-  description: "Ingeniería, instalación, mantenimiento y automatización HVAC con atención 24/7 en Panamá.",
-  alternates: { canonical: "/servicios" },
-};
+export const metadata = getServiciosMetadata();
 
 const pasos = [
   "Diagnóstico y cálculo de cargas",
@@ -18,8 +14,15 @@ const pasos = [
 ];
 
 export default function ServiciosPage() {
+  const serviciosJsonLd = buildServiceJsonLd(servicios);
+
   return (
     <div className="space-y-10">
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviciosJsonLd) }}
+      />
       <header className="space-y-3">
         <p className="text-sm font-semibold uppercase text-blue-700">Servicios</p>
         <h1 className="text-3xl font-semibold text-slate-900">Servicios HVAC diseñados para el clima de Panamá</h1>
