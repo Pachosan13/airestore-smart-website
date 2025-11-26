@@ -5,6 +5,10 @@
     "categoria": "aires-residenciales",
     "resumen": "Alta eficiencia SEER 18 con refrigerante ecológico y control Wi-Fi.",
     "caracteristicas": ["SEER 18", "Filtro HEPA opcional", "Silencioso"],
+    "marca": "Mitsubishi Electric",
+    "capacidad": "18,000 BTU",
+    "tipo": "Split Inverter",
+    "precio": 899,
     "imagen": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80"
   },
   {
@@ -13,6 +17,10 @@
     "categoria": "aires-comerciales",
     "resumen": "Cassette 4 vías ideal para oficinas y comercios con distribución uniforme.",
     "caracteristicas": ["Bomba de condensado", "Panel decorativo", "Control remoto"],
+    "marca": "LG",
+    "capacidad": "24,000 BTU",
+    "tipo": "Cassette Inverter",
+    "precio": 1250,
     "imagen": "https://images.unsplash.com/photo-1503389152951-9f343605f61e?auto=format&fit=crop&w=600&q=80"
   },
   {
@@ -21,6 +29,10 @@
     "categoria": "sistemas-vrf",
     "resumen": "Recuperación de calor para operar enfriando y calentando zonas en paralelo.",
     "caracteristicas": ["COP superior", "BMS ready", "Arranque suave"],
+    "marca": "Daikin",
+    "capacidad": "20-40 TR",
+    "tipo": "VRF Heat Recovery",
+    "precio": 18500,
     "imagen": "https://images.unsplash.com/photo-1582719478248-54e9f2af2d70?auto=format&fit=crop&w=600&q=80"
   },
   {
@@ -29,6 +41,10 @@
     "categoria": "ventilacion",
     "resumen": "Motores EC de bajo consumo para ventilación continua en proyectos LEED.",
     "caracteristicas": ["Control de velocidad", "Ultra silencioso", "Sensores CO₂"],
+    "marca": "Greenheck",
+    "capacidad": "800-1200 CFM",
+    "tipo": "Ventilación",
+    "precio": 720,
     "imagen": "https://images.unsplash.com/photo-1582719478244-0119023483c1?auto=format&fit=crop&w=600&q=80"
   },
   {
@@ -37,6 +53,10 @@
     "categoria": "refrigeracion-comercial",
     "resumen": "Sistema modular para cuartos fríos con monitoreo remoto.",
     "caracteristicas": ["Control electrónico", "Compatibilidad IoT", "Line set pre-armado"],
+    "marca": "Danfoss",
+    "capacidad": "10 HP",
+    "tipo": "Rack comercial",
+    "precio": 8900,
     "imagen": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=600&q=80"
   },
   {
@@ -45,6 +65,10 @@
     "categoria": "calidad-aire",
     "resumen": "Lámpara UV-C y filtro MERV 13 para mejorar IAQ en ductos.",
     "caracteristicas": ["Sensor de partículas", "Instalación rápida", "Garantía 2 años"],
+    "marca": "Blueair",
+    "capacidad": "Hasta 2,000 CFM",
+    "tipo": "Purificación",
+    "precio": 540,
     "imagen": "https://images.unsplash.com/photo-1523419400524-fae9ff1a7cfa?auto=format&fit=crop&w=600&q=80"
   },
   {
@@ -53,6 +77,10 @@
     "categoria": "mantenimiento",
     "resumen": "Checklists digitales, químicos premium y reportes trimestrales.",
     "caracteristicas": ["Visitas programadas", "Lubricación y vacío", "Reporte fotográfico"],
+    "marca": "Airestore",
+    "capacidad": "Portafolio 30-120 TR",
+    "tipo": "Servicio preventivo",
+    "precio": 290,
     "imagen": "https://images.unsplash.com/photo-1555580399-7b351dbba29d?auto=format&fit=crop&w=600&q=80"
   },
   {
@@ -61,6 +89,10 @@
     "categoria": "controles",
     "resumen": "Control remoto, geofencing y dashboards de consumo.",
     "caracteristicas": ["Compatibilidad voice", "Alertas", "Integración BMS"],
+    "marca": "Honeywell",
+    "capacidad": "1-4 zonas",
+    "tipo": "Control inteligente",
+    "precio": 260,
     "imagen": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=600&q=80"
   },
   {
@@ -69,6 +101,10 @@
     "categoria": "industrial",
     "resumen": "Chiller aire-agua con recuperación de calor y controles digitales.",
     "caracteristicas": ["Tablero NEMA", "Arranque suave", "BMS BACnet"],
+    "marca": "Carrier",
+    "capacidad": "40 TR",
+    "tipo": "Chiller aire-agua",
+    "precio": 47800,
     "imagen": "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=600&q=80"
   },
   {
@@ -77,6 +113,10 @@
     "categoria": "energia-eficiente",
     "resumen": "Reemplazo de compresores, variadores y válvulas de expansión electrónicas.",
     "caracteristicas": ["Ahorro 25%", "Monitoreo web", "ROI <18 meses"],
+    "marca": "Airestore",
+    "capacidad": "Portafolio 10-80 TR",
+    "tipo": "Retrofit energético",
+    "precio": 3200,
     "imagen": "https://images.unsplash.com/photo-1523867572715-adf5c0f1b4f7?auto=format&fit=crop&w=600&q=80"
   }
 ]
