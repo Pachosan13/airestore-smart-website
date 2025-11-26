@@ -80,7 +80,7 @@ export function QuoteForm({ context }: { context?: string }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="grid gap-3 rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-lg"
+      className="grid gap-3 rounded-2xl border border-white/15 bg-white/90 p-6 shadow-lg backdrop-blur"
       noValidate
     >
       <div className="grid gap-1">
@@ -92,7 +92,7 @@ export function QuoteForm({ context }: { context?: string }) {
           name="nombre"
           required
           placeholder="Ej: Ana Pérez"
-          className="rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none"
+          className="rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-900 focus:border-emerald-500 focus:outline-none"
         />
       </div>
       <div className="grid gap-1">
@@ -105,7 +105,7 @@ export function QuoteForm({ context }: { context?: string }) {
           type="email"
           required
           placeholder="ana@empresa.com"
-          className="rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none"
+          className="rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-900 focus:border-emerald-500 focus:outline-none"
         />
       </div>
       <div className="grid gap-1">
@@ -117,7 +117,7 @@ export function QuoteForm({ context }: { context?: string }) {
           name="telefono"
           required
           placeholder="+507 6XX XXX"
-          className="rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none"
+          className="rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-900 focus:border-emerald-500 focus:outline-none"
         />
       </div>
       <div className="grid gap-1">
@@ -127,7 +127,7 @@ export function QuoteForm({ context }: { context?: string }) {
         <select
           id="tipoCliente"
           name="tipoCliente"
-          className="rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none"
+          className="rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-900 focus:border-emerald-500 focus:outline-none"
           defaultValue=""
         >
           <option value="" disabled>
@@ -146,7 +146,7 @@ export function QuoteForm({ context }: { context?: string }) {
           id="servicio"
           name="servicio"
           placeholder="Instalación VRF, mantenimiento, equipos..."
-          className="rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none"
+          className="rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-900 focus:border-emerald-500 focus:outline-none"
         />
       </div>
       <div className="grid gap-1">
@@ -158,7 +158,7 @@ export function QuoteForm({ context }: { context?: string }) {
           name="mensaje"
           rows={3}
           placeholder="Describe capacidad, sitio, fechas, alcance..."
-          className="rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none"
+          className="rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-900 focus:border-emerald-500 focus:outline-none"
         />
       </div>
       {feedback && (
@@ -173,7 +173,7 @@ export function QuoteForm({ context }: { context?: string }) {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="mt-2 inline-flex items-center justify-center rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-lg transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70"
+        className="mt-2 inline-flex items-center justify-center rounded-full bg-emerald-400 px-4 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-900/30 transition hover:-translate-y-0.5 hover:bg-emerald-300 disabled:cursor-not-allowed disabled:opacity-70"
       >
         {status === "loading" ? "Enviando..." : "Solicitar cotización"}
       </button>
