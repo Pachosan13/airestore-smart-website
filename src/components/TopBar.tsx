@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 
-const phone = "+507 6000-0000";
-const whatsappLink = "https://wa.me/50760000000?text=Hola%20Aire%20Store";
+const phone = "+507 261-8083";
+const whatsappNumber = "+507 6030-9548";
+const whatsappLink = "https://wa.me/50760309548?text=Hola%20Aire%20Store";
 
 export function TopBar() {
   return (
@@ -17,7 +18,7 @@ export function TopBar() {
           </a>
           <span className="hidden h-3 w-px bg-slate-200 sm:block" aria-hidden />
           <a href={whatsappLink} className="font-medium text-green-600 hover:text-green-700" target="_blank" rel="noreferrer">
-            WhatsApp 24/7
+            WhatsApp {whatsappNumber}
           </a>
         </div>
         <div className="flex items-center gap-3">

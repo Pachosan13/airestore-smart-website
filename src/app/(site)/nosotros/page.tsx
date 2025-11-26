@@ -22,6 +22,10 @@ export default function NosotrosPage() {
           Somos ingenieros, técnicos certificados y PMs que acompañan proyectos residenciales, comerciales e industriales en
           Panamá. Trabajamos con protocolos de seguridad, eficiencia energética y experiencia de usuario.
         </p>
+        <p className="max-w-3xl text-slate-600">
+          Desde 2005, Aire Store ofrece equipos y materiales HVAC en Panamá, con presencia nacional a través de 5 sucursales y
+          respaldo técnico.
+        </p>
       </header>
 
       <div className="grid gap-4 md:grid-cols-3">
