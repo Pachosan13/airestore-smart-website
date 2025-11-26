@@ -32,26 +32,101 @@ export const blogPosts = [
   },
 ];
 
-export const servicios = [
+export type Servicio = {
+  slug: string;
+  titulo: string;
+  descripcion: string;
+  icono: string;
+  descripcionLarga: string;
+  beneficios: string[];
+  sectores: string[];
+  comoTrabajamos: string[];
+};
+
+export const servicios: Servicio[] = [
   {
+    slug: "ingenieria-hvac",
     titulo: "Ingeniería HVAC",
     descripcion: "Cálculos de carga, selección de equipos, planos y especificaciones para licitaciones y proyectos llave en mano.",
     icono: "📐",
+    descripcionLarga:
+      "Desarrollamos la ingeniería térmica completa: memoria de cálculo, selección de equipos tropicalizados, planos en BIM/AutoCAD y especificaciones para compras y licitaciones. Optimizamos consumo energético y aseguramos cumplimiento con normas ASHRAE adaptadas a la humedad y temperatura de Panamá.",
+    beneficios: [
+      "Modelos de carga térmica ajustados a zonas críticas y horarios pico",
+      "Selección de equipos inverter, VRF o agua helada según ROI",
+      "Planos listos para aprobación municipal y coordinación de obra",
+      "Presupuestos comparativos con opciones de eficiencia escalables",
+    ],
+    sectores: ["Residencial", "Comercial", "Proyectos e infraestructura"],
+    comoTrabajamos: [
+      "Levantamiento en sitio y revisión de planos arquitectónicos",
+      "Cálculos de carga y simulaciones energéticas",
+      "Diseño de ductería, hidráulica y ventilación mecánica",
+      "Entrega de planos, memorias y cronograma constructivo",
+    ],
   },
   {
-    titulo: "Instalación certificada",
+    slug: "instalacion-aires-acondicionados",
+    titulo: "Instalación de Aires Acondicionados",
     descripcion: "Cuadrillas profesionales, protocolos de vacío profundo, brazing y puesta en marcha documentada.",
     icono: "🛠️",
+    descripcionLarga:
+      "Instalamos minisplits, VRF y sistemas de agua helada con cuadrillas certificadas y supervisión de ingeniería. Ejecutamos brazing con nitrógeno, vacío profundo y pruebas de fuga para que el sistema opere estable desde el día uno, con documentación fotográfica y checklist de calidad.",
+    beneficios: [
+      "Instalaciones limpias y protegidas contra humedad y salitre",
+      "Protocolos de vacío y soldadura que prolongan la vida del compresor",
+      "Puesta en marcha con parámetros de fabricante y balanceo de aire",
+      "Entrega de reportes y garantía respaldada en Panamá",
+    ],
+    sectores: ["Residencial", "Comercial", "Proyectos e infraestructura"],
+    comoTrabajamos: [
+      "Planificación logística y protección de áreas sensibles",
+      "Instalación de tuberías, drenajes y alimentación eléctrica",
+      "Pruebas de presión, vacío profundo y carga de refrigerante",
+      "Configuración de controles y entrenamiento al usuario final",
+    ],
   },
   {
+    slug: "mantenimiento-247",
     titulo: "Mantenimiento 24/7",
     descripcion: "Planes preventivos y correctivos con monitoreo remoto, alertas y reportes digitales en minutos.",
     icono: "⏱️",
+    descripcionLarga:
+      "Operamos mantenimientos preventivos y correctivos con rutas optimizadas en Ciudad de Panamá y Panamá Oeste. Incorporamos monitoreo remoto, limpieza profunda y reemplazo de consumibles críticos para evitar paros en hoteles, comercios y residencias de alta ocupación.",
+    beneficios: [
+      "Alertas tempranas y visitas priorizadas en menos de 4 horas",
+      "Reportes con fotos, lecturas de presión y consumo",
+      "Limpieza profunda de serpentines y bandejas antibacterianas",
+      "Stock de repuestos rápidos para minimizar tiempos muertos",
+    ],
+    sectores: ["Residencial", "Comercial", "Proyectos e infraestructura"],
+    comoTrabajamos: [
+      "Inspección inicial y plan de mantenimiento por equipo",
+      "Checklists digitales con evidencia fotográfica",
+      "Monitoreo de variables críticas y ajuste de controles",
+      "Revisión de eficiencia y recomendaciones de mejora",
+    ],
   },
   {
+    slug: "automatizacion-bms",
     titulo: "Automatización y BMS",
     descripcion: "Integración con termostatos inteligentes, gateways BACnet/Modbus y dashboards de consumo.",
     icono: "🌐",
+    descripcionLarga:
+      "Integramos sistemas HVAC a plataformas de control para edificios inteligentes. Conectamos chillers, VRF y ventilación a gateways BACnet/Modbus, configuramos dashboards de consumo y generamos alertas para mantenimiento predictivo y ahorro energético continuo.",
+    beneficios: [
+      "Telemetría en tiempo real y alarmas personalizadas",
+      "Secuencias de control que reducen picos de demanda",
+      "Integración con sensores de calidad de aire y accesos",
+      "Reportes automáticos de consumo y confort",
+    ],
+    sectores: ["Residencial", "Comercial", "Proyectos e infraestructura"],
+    comoTrabajamos: [
+      "Evaluación de equipos y protocolos de comunicación",
+      "Selección de controladores, gateways y tableros",
+      "Programación de secuencias y pruebas integrales",
+      "Capacitación a operaciones y soporte continuo",
+    ],
   },
 ];
 

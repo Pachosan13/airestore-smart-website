@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { QuoteForm } from "@/components/QuoteForm";
 import { servicios } from "@/lib/data";
 
@@ -30,12 +31,20 @@ export default function ServiciosPage() {
 
       <div className="grid gap-4 md:grid-cols-2">
         {servicios.map((servicio) => (
-          <div key={servicio.titulo} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <Link
+            key={servicio.titulo}
+            href={`/servicios/${servicio.slug}`}
+            className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-md"
+          >
             <p className="text-lg font-semibold text-slate-900">
               {servicio.icono} {servicio.titulo}
             </p>
-            <p className="text-sm text-slate-600">{servicio.descripcion}</p>
-          </div>
+            <p className="mt-2 flex-1 text-sm text-slate-600">{servicio.descripcion}</p>
+            <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-blue-700">
+              Ver detalle
+              <span aria-hidden>→</span>
+            </span>
+          </Link>
         ))}
       </div>
 
