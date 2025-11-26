@@ -1,20 +1,24 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { QuoteForm } from "@/components/QuoteForm";
 import { categoriasHVAC, productosCatalogo, servicios, faq } from "@/lib/data";
+import { buildLocalBusinessJsonLd, buildWebsiteJsonLd, getHomeMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "HVAC Panamá: instalación, mantenimiento y proyectos",
-  description:
-    "Aire Store Panamá: ingeniería, instalación y mantenimiento HVAC premium para residencias, comercios e industria.",
-  alternates: { canonical: "/" },
-};
+export const metadata = getHomeMetadata();
 
 export default function HomePage() {
   const destacados = productosCatalogo.slice(0, 3);
+  const localBusinessJsonLd = buildLocalBusinessJsonLd();
+  const websiteJsonLd = buildWebsiteJsonLd();
 
   return (
     <div className="space-y-16">
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([localBusinessJsonLd, websiteJsonLd]),
+        }}
+      />
       <section className="grid items-center gap-10 rounded-3xl border border-slate-200 bg-white/90 p-10 shadow-xl md:grid-cols-2">
         <div className="space-y-6">
           <span className="inline-flex w-fit rounded-full bg-blue-50 px-4 py-2 text-xs font-semibold uppercase text-blue-700">

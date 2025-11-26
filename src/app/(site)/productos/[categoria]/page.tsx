@@ -3,21 +3,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { QuoteForm } from "@/components/QuoteForm";
 import { categoriasHVAC, productosCatalogo } from "@/lib/data";
+import { buildBreadcrumbJsonLd, buildProductsJsonLd, getCategoriaMetadata, siteUrl } from "@/lib/seo";
 
 export const dynamicParams = true;
 
 export async function generateMetadata({ params }: { params: Promise<{ categoria: string }> }): Promise<Metadata> {
   const { categoria: categoriaSlug } = await params;
-  const categoria = categoriasHVAC.find((cat) => cat.slug === categoriaSlug);
-  if (!categoria) {
-    return { title: "Categoría HVAC no encontrada" };
-  }
-
-  return {
-    title: `${categoria.nombre} en Panamá | HVAC premium`,
-    description: categoria.descripcion,
-    alternates: { canonical: `/productos/${categoria.slug}` },
-  };
+  return getCategoriaMetadata(categoriaSlug);
 }
 
 export default async function CategoriaPage({ params }: { params: Promise<{ categoria: string }> }) {
@@ -29,9 +21,22 @@ export default async function CategoriaPage({ params }: { params: Promise<{ cate
   }
 
   const productos = productosCatalogo.filter((producto) => producto.categoria === categoria.slug);
+  const breadcrumbsJsonLd = buildBreadcrumbJsonLd([
+    { name: "Inicio", url: siteUrl },
+    { name: "Productos", url: `${siteUrl}/productos` },
+    { name: categoria.nombre, url: `${siteUrl}/productos/${categoria.slug}` },
+  ]);
+  const productosJsonLd = buildProductsJsonLd(productos);
 
   return (
     <div className="space-y-10">
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([breadcrumbsJsonLd, productosJsonLd]),
+        }}
+      />
       <header className="space-y-3">
         <p className="text-sm font-semibold uppercase text-blue-700">Categoría</p>
         <h1 className="text-3xl font-semibold text-slate-900">{categoria.nombre}</h1>

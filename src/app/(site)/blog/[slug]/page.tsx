@@ -1,21 +1,12 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { blogPosts } from "@/lib/data";
+import { buildBlogPostingJsonLd, buildBreadcrumbJsonLd, getBlogPostMetadata, siteUrl } from "@/lib/seo";
 
 export const dynamicParams = true;
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const post = blogPosts.find((item) => item.slug === params.slug);
-  if (!post) {
-    return { title: "Artículo no encontrado" };
-  }
-
-  return {
-    title: `${post.titulo} | Blog HVAC Panamá`,
-    description: post.resumen,
-    alternates: { canonical: `/blog/${post.slug}` },
-  };
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  return getBlogPostMetadata(params.slug);
 }
 
 export default function BlogDetailPage({ params }: { params: { slug: string } }) {
@@ -25,8 +16,22 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
     notFound();
   }
 
+  const postJsonLd = buildBlogPostingJsonLd(post.slug);
+  const breadcrumbsJsonLd = buildBreadcrumbJsonLd([
+    { name: "Inicio", url: siteUrl },
+    { name: "Blog", url: `${siteUrl}/blog` },
+    { name: post.titulo, url: `${siteUrl}/blog/${post.slug}` },
+  ]);
+
   return (
     <div className="space-y-8">
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([postJsonLd, breadcrumbsJsonLd].filter(Boolean)),
+        }}
+      />
       <Link href="/blog" className="text-sm font-semibold text-blue-700">
         ← Volver al blog
       </Link>

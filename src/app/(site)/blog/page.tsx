@@ -1,16 +1,32 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { blogPosts } from "@/lib/data";
+import { getBlogListMetadata, siteUrl } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Blog HVAC Panamá",
-  description: "Artículos sobre climatización, VRF y calidad de aire en Panamá por Aire Store.",
-  alternates: { canonical: "/blog" },
-};
+export const metadata = getBlogListMetadata();
 
 export default function BlogPage() {
+  const blogJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: "Blog Aire Store Panamá",
+    description:
+      "Contenido sobre aire acondicionado Panamá, instalación aire acondicionado, repuestos hvac panamá y tendencias HVAC.",
+    blogPost: blogPosts.map((post) => ({
+      "@type": "BlogPosting",
+      headline: post.titulo,
+      description: post.resumen,
+      datePublished: post.fecha,
+      url: `${siteUrl}/blog/${post.slug}`,
+    })),
+  };
+
   return (
     <div className="space-y-8">
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
+      />
       <header className="space-y-3">
         <p className="text-sm font-semibold uppercase text-blue-700">Blog</p>
         <h1 className="text-3xl font-semibold text-slate-900">Insights HVAC para Panamá</h1>
